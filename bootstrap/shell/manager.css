@@ -1,0 +1,214 @@
+/* AUTHOR BANNER */
+
+.author-banner {
+  position:absolute;
+  top:50px;
+  right:0;
+  z-index:9999;
+  height:3em;
+  line-height:3em;
+  padding:0 15px;
+  color:#31708f;
+}
+
+
+/* MANAGER MENU */
+
+.widget-manager-menu li {
+  border:1px solid #ddd;
+  border-top:none;
+  padding:10px 15px;
+}
+
+.widget-manager-menu li:first-child {
+  border-top:1px solid #ddd;
+  border-radius:4px 4px 0 0;
+}
+
+.widget-manager-menu li:last-child {border-radius:0 0 4px 4px}
+
+.widget-manager-menu li:first-child a {border-radius:3px 3px 0 0}
+.widget-manager-menu li:last-child a {border-radius:0 0 3px 3px}
+
+.widget-manager-menu a {
+  display:block;
+  padding:10px 15px;
+  margin:-10px -15px;
+  text-decoration:none;
+}
+
+.widget-manager-menu a:focus,
+.widget-manager-menu a:hover {background-color:#f5f5f5}
+
+.widget-manager-menu .selected,
+.widget-manager-menu .selected:first-child {
+  border-color:#428bca;
+  border-top:1px solid #428bca;
+  margin-top:-1px;
+}
+
+.widget-manager-menu .selected:first-child {margin-top:0}
+
+.widget-manager-menu .selected a {
+  background-color:#428bca;
+  color:white;
+}
+
+.widget-manager-menu .separator {display:none}
+
+
+/* EDITOR TOOLBAR */
+
+.editor-toolbar a {
+  background-color:white;
+  color:#333;
+  border:1px solid #ccc;
+  margin:0 -1px 5px 0;
+  width:32px;
+  height:32px;
+  line-height:32px;
+  position:relative;
+}
+
+textarea + .editor-toolbar a {margin:5px -1px 0 0}
+
+.editor-toolbar a:first-child {border-radius:4px 0 0 4px}
+.editor-toolbar a:last-child {border-radius:0 4px 4px 0}
+
+.editor-toolbar a:hover {
+  background-color:#e6e6e6;
+  border-color:#adadad;
+  z-index:1;
+}
+
+.editor-toolbar a:active {
+  outline:none;
+  -webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);
+  box-shadow:inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+.custom-modal button {
+  font:inherit;
+  line-height:1.42857143;
+  color:#333;
+  background-color:white;
+  border:1px solid #ccc;
+  border-radius:4px;
+  padding:6px 12px;
+}
+
+.custom-modal button:hover,
+.custom-modal button:active {
+  background-color:#e6e6e6;
+  border-color:#adadad;
+}
+
+.custom-modal button:active {
+  -webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);
+  box-shadow:inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+
+/* TAB */
+
+.tab {border-radius:4px 4px 0 0}
+
+.tab,
+.tab.active:before,
+.tab.active:after {border-color:#ddd}
+
+.tab:focus,
+.tab:hover {
+  outline:none;
+  text-decoration:none;
+}
+
+
+/* MAIN ACTIONS */
+
+.main-actions {border-color:#ddd}
+
+
+/* CUSTOM CHECKBOX & RADIO */
+
+.checkbox,
+.radio {
+  margin-top:0;
+  margin-bottom:0;
+  min-height:1em;
+  color:inherit;
+}
+
+.checkbox.checked,
+.radio.checked {color:#31708f}
+
+
+/* LIST */
+
+.page-list .page-hader {
+  margin:0;
+  padding:0;
+  border:none;
+}
+
+
+/* MEDIA */
+
+.media-item {
+  border-color:#eee;
+  padding:20px 0;
+  margin:10px 0 0;
+}
+
+.media-item + .media-item {margin-top:0}
+.media-item h4 + p {margin-top:10px}
+
+
+/* TOOLTIP */
+
+.tooltip {
+  opacity:1;
+  filter:alpha(opacity=1);
+}
+
+
+/* MODAL */
+
+.modal-content {
+  border-color:#ddd;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  border-radius:0;
+}
+
+.modal-header,
+.modal-footer {
+  margin:0;
+  border:none;
+}
+
+.modal-footer {padding:0}
+
+
+/* PLUGIN PAGE */
+
+.plugin-author {
+  background-color:#d9edf7;
+  color:#31708f;
+  margin-bottom:0;
+}
+
+.plugin-title {
+  background-color:#e5f2f7;
+  color:#31708f;
+}
+
+
+/* SMALLER SCREEN */
+
+@media (max-width:767px) {
+  .author-banner {
+    position:static;
+    text-align:right;
+  }
+}

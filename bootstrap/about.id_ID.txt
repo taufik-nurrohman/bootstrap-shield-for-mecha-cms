@@ -1,0 +1,10 @@
+Title: Bootstrap
+Author: Taufik Nurrohman
+URL: http://mecha-cms.com
+Version: 1.0.0
+
+====
+
+Tameng Bootstrap untuk CMS Mecha.
+
+*[CMS]: Content Management System

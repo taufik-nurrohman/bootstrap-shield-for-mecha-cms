@@ -1,0 +1,10 @@
+Title: Bootstrap
+Author: Taufik Nurrohman
+URL: http://mecha-cms.com
+Version: 1.0.0
+
+====
+
+Bootstrap shield for Mecha CMS.
+
+*[CMS]: Content Management System
