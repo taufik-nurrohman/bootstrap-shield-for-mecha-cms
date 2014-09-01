@@ -145,7 +145,7 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 
 /* LIST */
 
-.page-list .page-hader {
+.page-list .page-header {
   margin:0;
   padding:0;
   border:none;
@@ -161,7 +161,9 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 }
 
 .media-item + .media-item {margin-top:0}
+.media-item h4 {margin-top:-.15em}
 .media-item h4 + p {margin-top:10px}
+.media-item p:last-child {margin-bottom:0}
 
 
 /* TOOLTIP */

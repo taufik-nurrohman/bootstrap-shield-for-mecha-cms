@@ -742,6 +742,7 @@ a.text-reject:hover {color:#843534}
 }
 
 .pagination a,
+.pagination span,
 .pagination strong {
   position:relative;
   float:left;
@@ -755,12 +756,14 @@ a.text-reject:hover {color:#843534}
 }
 
 .pagination a:first-child,
+.pagination span:first-child,
 .pagination strong:first-child {
   margin-left:0;
   border-radius:4px 0 0 4px;
 }
 
 .pagination a:last-child,
+.pagination span:last-child,
 .pagination strong:last-child {border-radius:0 4px 4px 0}
 
 .pagination a:hover,
@@ -770,6 +773,9 @@ a.text-reject:hover {color:#843534}
   border-color:#ddd;
 }
 
+.pagination span,
+.pagination span:hover,
+.pagination span:focus,
 .pagination strong,
 .pagination strong:hover,
 .pagination strong:focus {
@@ -778,6 +784,17 @@ a.text-reject:hover {color:#843534}
   background-color:#fff;
   border-color:#ddd;
 }
+
+.pagination span:first-child + span + span,
+.pagination a:first-child + a + span {
+  padding:0;
+  border:none;
+}
+
+.pagination span a:first-child,
+.pagination span a:last-child,
+.pagination span strong:first-child,
+.pagination span strong:last-child {border-radius:0}
 
 .table-full {
   width:100%;
