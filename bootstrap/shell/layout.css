@@ -707,6 +707,7 @@ fieldset[disabled] .btn-reject.active {
 .form-static {
   display:block;
   padding-top:7px;
+  padding-bottom:7px;
   line-height:1.42857143;
 }
 
