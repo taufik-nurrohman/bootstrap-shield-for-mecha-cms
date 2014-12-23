@@ -25,9 +25,9 @@
   border-radius:4px 4px 0 0;
 }
 
-.widget-manager-menu li:last-child {border-radius:0 0 4px 4px}
-
 .widget-manager-menu li:first-child a {border-radius:3px 3px 0 0}
+
+.widget-manager-menu li:last-child {border-radius:0 0 4px 4px}
 .widget-manager-menu li:last-child a {border-radius:0 0 3px 3px}
 
 .widget-manager-menu a {

@@ -1,4 +1,4 @@
-/* GENERAL */
+/* GENERALS */
 
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
@@ -9,6 +9,7 @@ h1,h2,h3,h4,h5,h6,
 fieldset {margin:0 0 10px}
 
 .blog-main {padding-bottom:30px}
+.footnotes {font-size:75%}
 
 
 /* LOGIN FORM */
@@ -31,7 +32,7 @@ fieldset {margin:0 0 10px}
 .blog-header h1 a:hover {color:#245269}
 
 
-/* POST */
+/* POSTS */
 
 .post-index {
   background-color:#f5fcff;
