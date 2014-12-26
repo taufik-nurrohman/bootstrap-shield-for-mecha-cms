@@ -178,6 +178,7 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 
 .modal-content {
   border-color:#ddd;
+  border-width:1px 0;
   -webkit-box-shadow:none;
   box-shadow:none;
   border-radius:0;
@@ -187,6 +188,8 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 .modal-footer {
   margin:0;
   border:none;
+  text-align:left;
+  letter-spacing:0;
 }
 
 .modal-footer {padding:0}
