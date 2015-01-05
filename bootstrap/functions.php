@@ -32,4 +32,6 @@ Filter::add('navigation:list', function($str) {
     $str);
 });
 
-Menu::configure('children', 'navbar-nav-submenu navbar-nav-submenu-%s');
+Menu::configure('classes', array(
+    'children' => 'navbar-nav-submenu navbar-nav-submenu-%s'
+));

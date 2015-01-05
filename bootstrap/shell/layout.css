@@ -1018,6 +1018,7 @@ a.text-reject:hover {color:#843534}
 
 .navbar-collapse li .navbar-nav-submenu a:focus,
 .navbar-collapse li .navbar-nav-submenu a:hover,
+.navbar-collapse li .navbar-nav-submenu .active > a,
 .navbar-collapse li ul li:hover > a {
   background-color:#31708f;
   color:white;
