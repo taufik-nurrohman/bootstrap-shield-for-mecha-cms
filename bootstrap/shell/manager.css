@@ -111,7 +111,11 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 
 /* TAB */
 
-.tab {border-radius:4px 4px 0 0}
+.tab {
+  font-weight:bold;
+  font-size:80%;
+  border-radius:4px 4px 0 0;
+}
 
 .tab,
 .tab.active:before,
