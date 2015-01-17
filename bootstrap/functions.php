@@ -11,7 +11,7 @@ Widget::add('tagLinks', function($connector = ', ') {
             $links[] = '<a href="' . $config->url . '/' . $config->tag->slug . '/' . $tag->slug . '" rel="tag">' . $tag->name . '</a>';
         }
     }
-    return ! empty($links) ? $speak->tags . ': ' . implode($connector, $links) : "";
+    return ! empty($links) ? (count($links) > 1 ? $speak->tags : $speak->tag) . ': ' . implode($connector, $links) : "";
 });
 
 Config::set(array(
