@@ -40,6 +40,15 @@
 .widget-manager-menu a:focus,
 .widget-manager-menu a:hover {background-color:#f5f5f5}
 
+.widget-manager-menu .label {
+  font:inherit;
+  color:inherit;
+  margin:0;
+  padding:0;
+  border:none;
+  display:inline;
+}
+
 .widget-manager-menu .selected,
 .widget-manager-menu .selected:first-child {
   border-color:#428bca;
@@ -112,8 +121,7 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 /* TAB */
 
 .tab {
-  font-weight:bold;
-  font-size:80%;
+  font-weight:normal;
   border-radius:4px 4px 0 0;
 }
 
@@ -160,13 +168,19 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 
 .media-item {
   border-color:#eee;
-  padding:20px 0;
-  margin:10px 0 0;
+  padding-top:20px;
+  padding-bottom:20px;
+  margin-top:10px;
+}
+
+.media-capture {
+  margin-top:20px;
+  margin-bottom:20px;
 }
 
 .media-item + .media-item {margin-top:0}
-.media-item h4 {margin-top:-.15em}
-.media-item h4 + p {margin-top:10px}
+.media-title {margin-top:-.15em}
+.media-title + p {margin-top:10px}
 .media-item p:last-child {margin-bottom:0}
 
 
