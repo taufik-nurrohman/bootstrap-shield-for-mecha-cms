@@ -5,8 +5,15 @@
   <p class="post-time text-muted"><i class="fa fa-calendar"></i> <time datetime="<?php echo $article->date->W3C; ?>"><?php echo $article->date->FORMAT_1; ?></time></p>
   <h3 class="post-title"><a href="<?php echo $article->url; ?>"><?php echo $article->title; ?></a></h3>
   <div class="post-body">
-    <div class="post-description"><?php echo $article->description; ?></div>
+    <?php if( ! empty($article->excerpt)): ?>
+    <div class="post-description"><?php echo $article->excerpt; ?></div>
+    <?php else: ?>
+    <p class="post-description"><?php echo $article->description; ?></p>
+    <?php endif; ?>
   </div>
+  <?php if(strpos($article->excerpt, '<a class="fi-link"') === false): ?>
+  <div class="text-right"><a class="btn btn-primary btn-sm" href="<?php echo $article->url; ?>"><i class="fa fa-chevron-right"></i> <?php echo $speak->read_more; ?></a></div>
+  <?php endif; ?>
   <div><?php Weapon::fire('article_footer', array($article)); ?></div>
 </article>
 <?php endforeach; ?>

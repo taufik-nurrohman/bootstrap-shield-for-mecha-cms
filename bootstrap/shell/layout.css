@@ -92,60 +92,25 @@ fieldset {margin:0 0 10px}
 }
 
 
-/* MECHA'S DEFAULT GRID SYSTEM */
-
-.grid-group {
-  display:block;
-  margin-top:10px;
-  cursor:inherit;
-  zoom:1;
-}
-
-.cf:after,
-.grid-group:after {
-  content:" ";
-  display:table;
-  clear:both;
-}
-
-.cl {
-  display:block;
-  clear:both;
-}
-
-.grid {
-  min-height:1px;
-  float:left;
-  margin-left:4.349%;
-}
-
-.grid:first-child {margin-left:0}
-
-.span-1 {width:13.043%}
-.span-2 {width:30.434%}
-.span-3 {width:47.826%}
-.span-4 {width:65.217%}
-.span-5 {width:82.608%}
-.span-6 {width:100%}
-
-.no-gap .grid {margin-left:0}
-.no-gap .span-1 {width:16.666%}
-.no-gap .span-2 {width:33.333%}
-.no-gap .span-3 {width:50%}
-.no-gap .span-4 {width:66.666%}
-.no-gap .span-5 {width:83.333%}
-.no-gap .span-6 {width:100%}
-
-
 /* MISCELLANEOUS */
-
-.code {font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
 
 .btn-disabled {
   cursor:default;
   cursor:not-allowed;
   opacity:.65;
 }
+
+.grid-group {margin-bottom:10px}
+
+.form-label,
+.form-static {
+  display:block;
+  padding-top:7px;
+  padding-bottom:7px;
+  line-height:1.42857143;
+}
+
+.form-label {text-align:right}
 
 
 /* BOOTSTRAP OVERWRITES */
@@ -239,6 +204,7 @@ input[type="file"],
 label,
 select {cursor:pointer}
 
+.input-sm,
 .input-small {
   height:30px;
   padding:5px 10px;
@@ -247,14 +213,18 @@ select {cursor:pointer}
   border-radius:3px;
 }
 
+.select-sm,
 .select-small {
   height:30px;
   line-height:30px;
 }
 
+.textarea-sm,
 .textarea-small,
+.select-sm[multiple],
 .select-small[multiple] {height:auto}
 
+.input-lg,
 .input-large {
   height:46px;
   padding:10px 16px;
@@ -263,12 +233,15 @@ select {cursor:pointer}
   border-radius:6px;
 }
 
+.select-lg,
 .select-large {
   height:46px;
   line-height:46px;
 }
 
+.textarea-lg,
 .textarea-large,
+.select-lg[multiple],
 .select-large[multiple] {height:auto}
 
 .btn {
@@ -673,6 +646,7 @@ fieldset[disabled] .btn-reject.active {
   border-color:#d43f3a;
 }
 
+.btn-lg,
 .btn-large {
   padding:10px 16px;
   font-size:18px;
@@ -680,6 +654,7 @@ fieldset[disabled] .btn-reject.active {
   border-radius:6px;
 }
 
+.btn-sm,
 .btn-small {
   padding:5px 10px;
   font-size:12px;
@@ -687,6 +662,7 @@ fieldset[disabled] .btn-reject.active {
   border-radius:3px;
 }
 
+.btn-xs,
 .btn-x-small {
   padding:1px 5px;
   font-size:12px;
@@ -694,50 +670,8 @@ fieldset[disabled] .btn-reject.active {
   border-radius:3px;
 }
 
-.btn-block,
-.input-block,
-.select-block,
-.textarea-block {
-  display:block;
-  width:100%;
-}
-
-.form-label,
-.form-static {
-  display:block;
-  padding-top:7px;
-  padding-bottom:7px;
-  line-height:1.42857143;
-}
-
-.form-label {text-align:right}
-
-.no-appearance,
-a.no-appearance,
-button.no-appearance,
-input.no-appearance,
-select.no-appearance,
-textarea.no-appearance {
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
-  margin:0;
-  padding:0;
-  border:none;
-  background:none;
-  outline:none;
-  font:inherit;
-  color:inherit;
-  text-align:inherit;
-  -webkit-border-radius:0;
-  -moz-border-radius:0;
-  border-radius:0;
-  -webkit-box-shadow:none;
-  -moz-box-shadow:none;
-  box-shadow:none;
-}
-
-.text-muted {color:#777}
+.text-muted,
+.text-fade {color:#777}
 .text-accept,
 .text-begin,
 .text-construct,
@@ -822,7 +756,7 @@ a.text-reject:hover {color:#843534}
 .pagination span strong:first-child,
 .pagination span strong:last-child {border-radius:0}
 
-.table-full {
+.table-full-width {
   width:100%;
   max-width:100%;
   margin-bottom:20px;

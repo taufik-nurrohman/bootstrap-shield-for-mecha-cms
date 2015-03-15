@@ -166,7 +166,7 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 
 /* MEDIA */
 
-.media-item {
+.media {
   border-color:#eee;
   padding-top:20px;
   padding-bottom:20px;
@@ -178,10 +178,10 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
   margin-bottom:20px;
 }
 
-.media-item + .media-item {margin-top:0}
+.media + .media {margin-top:0}
 .media-title {margin-top:-.15em}
 .media-title + p {margin-top:10px}
-.media-item p:last-child {margin-bottom:0}
+.media p:last-child {margin-bottom:0}
 
 
 /* TOOLTIP */
