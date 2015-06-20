@@ -6,7 +6,7 @@
   <?php if($article->total_comments > 0): ?>
   <?php foreach($article->comments as $comment): ?>
   <li class="media">
-    <img class="pull-left media-object" alt="<?php echo $comment->name; ?>" src="<?php echo $config->protocol . 'www.gravatar.com/avatar/' . md5($comment->email) . '?s=64&amp;d=monsterid'; ?>" width="64" height="64">
+    <img class="pull-left media-object" alt="" src="<?php echo $config->protocol . 'www.gravatar.com/avatar/' . md5($comment->email) . '?s=64&amp;d=monsterid'; ?>" width="64" height="64">
     <div class="media-body">
       <?php if( ! empty($comment->url) && $comment->url != '#'): ?>
       <h5 class="media-heading"><a href="<?php echo $comment->url; ?>" rel="nofollow" target="_blank"><?php echo $comment->name; ?></a></h5>
@@ -45,6 +45,7 @@
       <span class="grid span-1 form-label"><?php echo $speak->comment_message; ?></span>
       <span class="grid span-5"><textarea name="message" class="textarea-block"><?php echo Guardian::wayback('message'); ?></textarea></span>
     </label>
+    <?php Weapon::fire('comment_form_input', array($article)); ?>
     <label class="grid-group">
       <span class="grid span-1 form-label"><?php echo Guardian::math(); ?> =</span>
       <span class="grid span-5"><input name="math" type="text" value="" autocomplete="off"></span>
