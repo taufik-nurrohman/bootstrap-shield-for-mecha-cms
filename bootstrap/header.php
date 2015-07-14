@@ -5,8 +5,8 @@
     <?php Weapon::fire('shell_before'); ?>
     <?php echo Asset::stylesheet(array(
         $config->protocol . ICON_LIBRARY_PATH,
-        'shell/bootstrap.min.css',
-        'shell/layout.css'
+        'assets/shell/bootstrap.min.css',
+        'assets/shell/layout.css'
     )); ?>
     <?php Weapon::fire('shell_after'); ?>
   </head>

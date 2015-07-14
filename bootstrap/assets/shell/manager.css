@@ -213,17 +213,17 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 .modal-footer {padding:0}
 
 
-/* PLUGIN PAGE */
+/* ABOUT PAGE */
 
-.plugin-author {
+.about-title {
+  background-color:#e5f2f7;
+  color:#31708f;
+}
+
+.about-author {
   background-color:#d9edf7;
   color:#31708f;
   margin-bottom:0;
-}
-
-.plugin-title {
-  background-color:#e5f2f7;
-  color:#31708f;
 }
 
 
