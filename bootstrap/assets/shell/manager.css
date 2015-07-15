@@ -1,6 +1,6 @@
 /* AUTHOR BANNER */
 
-.author-banner {
+.widget-manager-bar {
   position:absolute;
   top:50px;
   right:0;
@@ -8,7 +8,6 @@
   height:3em;
   line-height:3em;
   padding:0 15px;
-  color:#31708f;
 }
 
 
@@ -26,7 +25,6 @@
 }
 
 .widget-manager-menu li:first-child a {border-radius:3px 3px 0 0}
-
 .widget-manager-menu li:last-child {border-radius:0 0 4px 4px}
 .widget-manager-menu li:last-child a {border-radius:0 0 3px 3px}
 
@@ -106,6 +104,7 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
   padding:6px 12px;
 }
 
+.custom-modal button:focus,
 .custom-modal button:hover,
 .custom-modal button:active {
   background-color:#e6e6e6;
@@ -121,9 +120,17 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 /* TAB */
 
 .tab {
+  color:#337ab7;
   font-weight:normal;
   border-radius:4px 4px 0 0;
 }
+
+.tab:focus,
+.tab:hover {color:#23527c}
+
+.tab.active,
+.tab.active:focus,
+.tab.active:hover {color:inherit}
 
 .tab,
 .tab.active:before,
@@ -138,7 +145,7 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 
 /* MAIN ACTIONS */
 
-.main-actions {border-color:#ddd}
+.main-action-group {border-color:#ddd}
 
 
 /* CUSTOM CHECKBOX & RADIO */
@@ -189,6 +196,7 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 .tooltip {
   opacity:1;
   filter:alpha(opacity=1);
+  font-size:80%;
 }
 
 
@@ -230,7 +238,7 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 /* SMALLER SCREEN */
 
 @media (max-width:767px) {
-  .author-banner {
+  .widget-manager-bar {
     position:static;
     text-align:right;
   }

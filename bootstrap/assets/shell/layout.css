@@ -8,6 +8,7 @@ h1,h2,h3,h4,h5,h6,
 }
 
 fieldset {margin:0 0 10px}
+pre {border-width:0}
 
 .blog-main {padding-bottom:30px}
 .footnotes {font-size:75%}
@@ -35,14 +36,8 @@ fieldset {margin:0 0 10px}
 
 /* POSTS */
 
-.post-index {
-  background-color:#f5fcff;
-  border:1px solid #e5f2f7;
-  padding:20px;
-  border-radius:4px;
-}
-
-.post-index + .post-index {margin-top:10px}
+.post-index {padding:20px 0}
+.post-index + .post-index {border-top:1px solid #e5f2f7}
 .post-footer {margin:20px 0 0}
 
 
@@ -91,6 +86,14 @@ fieldset {margin:0 0 10px}
   border:none;
 }
 
+.widget-archive-hierarchy .close {
+  font:inherit;
+  color:inherit;
+  font-family:Sans-Serif;
+  text-shadow:none;
+  opacity:1;
+}
+
 
 /* MISCELLANEOUS */
 
@@ -101,6 +104,7 @@ fieldset {margin:0 0 10px}
 }
 
 .grid-group {margin-bottom:10px}
+.post .toc-block {margin-bottom:20px} /* TOC Plugin */
 
 .form-label,
 .form-static {

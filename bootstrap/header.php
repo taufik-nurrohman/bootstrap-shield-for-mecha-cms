@@ -7,7 +7,7 @@
         $config->protocol . ICON_LIBRARY_PATH,
         'assets/shell/bootstrap.min.css',
         'assets/shell/layout.css'
-    )); ?>
+    ), "", 'shell/bootstrap.min.css'); ?>
     <?php Weapon::fire('shell_after'); ?>
   </head>
   <body>
