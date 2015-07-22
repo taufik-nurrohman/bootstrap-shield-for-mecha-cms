@@ -5,6 +5,15 @@ Version: 1.2.0
 
 ====
 
-Tameng **Bootstrap** untuk CMS Mecha.
+> Tameng **Bootstrap** untuk CMS Mecha.
+
+**Bootstrap** adalah kerangka HTML, CSS, dan JS paling populer untuk mengembangkan proyek responsif, _mobile first_ di web.
+
+**Situs:** <http://getbootstrap.com>
+
+<!-- block:donate -->
 
 *[CMS]: Content Management System
+*[CSS]: Cascading Style Sheet
+*[HTML]: Hyper Text Markup Language
+*[JS]: JavaScript
