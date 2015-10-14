@@ -1,5 +1,7 @@
 /* GENERALS */
 
+abbr {text-decoration:none}
+
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
   font-weight:bold;
@@ -12,6 +14,9 @@ pre {border-width:0}
 
 .blog-main {padding-bottom:30px}
 .footnotes {font-size:75%}
+
+.align-right {margin:.5em 0 .5em 1em}
+.align-left {margin:.5em 1em .5em 0}
 
 
 /* LOGIN FORM */
@@ -43,8 +48,14 @@ pre {border-width:0}
 
 /* COMMENTS */
 
-.comments h5 {letter-spacing:0}
-.comment-form input[name="math"] {width:4em}
+.comments .media {
+  padding:0;
+  border-width:0;
+  margin:0 0 20px;
+}
+
+.comments .media-content {margin-bottom:10px}
+.comments input[name="math"] {width:4em}
 
 
 /* FOOTER */
@@ -759,12 +770,6 @@ a.text-reject:hover {color:#843534}
 .pagination span a:last-child,
 .pagination span strong:first-child,
 .pagination span strong:last-child {border-radius:0}
-
-.table-full-width {
-  width:100%;
-  max-width:100%;
-  margin-bottom:20px;
-}
 
 .table-bordered {border:1px solid #ddd}
 

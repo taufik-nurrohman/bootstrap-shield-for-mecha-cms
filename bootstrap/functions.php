@@ -23,7 +23,7 @@ Filter::add('navigation:list', function($str) {
     return preg_replace(
         array(
             '#^<ul>#',
-            '# class="selected"#'
+            '# class="current"#'
         ),
         array(
             '<ul class="nav navbar-nav">',
@@ -33,5 +33,6 @@ Filter::add('navigation:list', function($str) {
 });
 
 Menu::configure('classes', array(
-    'children' => 'navbar-nav-submenu navbar-nav-submenu-%s'
+    'current' => 'current',
+    'children' => 'navbar-nav-submenu navbar-nav-submenu-%d'
 ));

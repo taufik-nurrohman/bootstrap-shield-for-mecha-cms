@@ -1,20 +1,22 @@
 <section class="comments">
-  <h4 class="comment-header">
+  <h3 class="comment-header">
     <i class="fa fa-comments"></i> <?php echo $article->total_comments_text; ?>
-  </h4>
+  </h3>
   <ol class="media-list">
   <?php if($article->total_comments > 0): ?>
   <?php foreach($article->comments as $comment): ?>
   <li class="media">
-    <img class="pull-left media-object" alt="" src="<?php echo $config->protocol . 'www.gravatar.com/avatar/' . md5($comment->email) . '?s=64&amp;d=monsterid'; ?>" width="64" height="64">
+    <div class="media-left">
+      <img class="media-object" alt="" src="<?php echo $config->protocol . 'www.gravatar.com/avatar/' . md5($comment->email) . '?s=64&amp;d=monsterid'; ?>" width="64" height="64">
+    </div>
     <div class="media-body">
       <?php if( ! empty($comment->url) && $comment->url != '#'): ?>
-      <h5 class="media-heading"><a href="<?php echo $comment->url; ?>" rel="nofollow" target="_blank"><?php echo $comment->name; ?></a></h5>
+      <h4 class="media-heading"><a href="<?php echo $comment->url; ?>" rel="nofollow" target="_blank"><?php echo $comment->name; ?></a></h4>
       <?php else: ?>
-      <h5 class="media-heading"><?php echo $comment->name; ?></h5>
+      <h4 class="media-heading"><?php echo $comment->name; ?></h4>
       <?php endif; ?>
       <div class="media-content">
-        <p class="media-time"><em class="small"><time class="text-muted" datetime="<?php echo $comment->date->W3C; ?>"><?php echo $comment->date->FORMAT_1; ?></time> <a href="<?php echo $comment->permalink; ?>" title="<?php echo $speak->permalink; ?>" rel="nofollow">#</a></em></p>
+        <p class="media-time small"><em><time class="text-muted" datetime="<?php echo $comment->date->W3C; ?>"><?php echo $comment->date->FORMAT_1; ?></time> <a href="<?php echo $comment->permalink; ?>" title="<?php echo $speak->permalink; ?>" rel="nofollow">#</a></em></p>
         <?php echo $comment->message; ?>
       </div>
       <footer class="media-footer">

@@ -1,4 +1,4 @@
-/* AUTHOR BANNER */
+/* MANAGER BAR */
 
 .widget-manager-bar {
   position:absolute;
@@ -47,16 +47,16 @@
   display:inline;
 }
 
-.widget-manager-menu .selected,
-.widget-manager-menu .selected:first-child {
+.widget-manager-menu .current,
+.widget-manager-menu .current:first-child {
   border-color:#428bca;
   border-top:1px solid #428bca;
   margin-top:-1px;
 }
 
-.widget-manager-menu .selected:first-child {margin-top:0}
+.widget-manager-menu .current:first-child {margin-top:0}
 
-.widget-manager-menu .selected a {
+.widget-manager-menu .current a {
   background-color:#428bca;
   color:white;
 }
@@ -173,22 +173,22 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 
 /* MEDIA */
 
-.media {
+.page-manager .media {
   border-color:#eee;
   padding-top:20px;
   padding-bottom:20px;
   margin-top:10px;
 }
 
-.media-capture {
+.page-manager .media-capture {
   margin-top:20px;
   margin-bottom:20px;
 }
 
-.media + .media {margin-top:0}
-.media-title {margin-top:-.15em}
-.media-title + p {margin-top:10px}
-.media p:last-child {margin-bottom:0}
+.page-manager .media + .media {margin-top:0}
+.page-manager .media-title {margin-top:-.15em}
+.page-manager .media-title + p {margin-top:10px}
+.page-manager .media p:last-child {margin-bottom:0}
 
 
 /* TOOLTIP */
