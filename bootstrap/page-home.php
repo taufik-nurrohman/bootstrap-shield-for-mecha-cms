@@ -5,4 +5,4 @@
  * change the content with your homepage markup if you want.
  */
 
-include SHIELD . DS . $config->shield . DS . 'index.php';
+Shield::chunk('index');

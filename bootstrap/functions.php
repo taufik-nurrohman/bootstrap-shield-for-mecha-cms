@@ -1,38 +1,43 @@
 <?php
 
-Widget::add('tagLinks', function($connector = ', ') {
-    $config = Config::get();
-    $speak = Config::speak();
+Widget::add('tagLinks', function($connect = ', ') use($config, $speak) {
     $links = array();
-    $source = $config->article->tags;
-    if( ! isset($source) || ! is_object($source)) return "";
-    foreach($source as $tag) {
+    $article = Shield::lot('article');
+    if( ! $article || ! isset($article->tags)) return "";
+    foreach($article->tags as $tag) {
         if($tag && $tag->id !== 0) {
-            $links[] = '<a href="' . $config->url . '/' . $config->tag->slug . '/' . $tag->slug . '" rel="tag">' . $tag->name . '</a>';
+            $url = Filter::colon('tag:url', $config->url . '/' . $config->tag->slug . '/' . $tag->slug);
+            $links[] = '<a href="' . $url . '" rel="tag">' . $tag->name . '</a>';
         }
     }
-    return ! empty($links) ? (count($links) > 1 ? $speak->tags : $speak->tag) . ': ' . implode($connector, $links) : "";
+    $text = count($links) > 1 ? $speak->tags : $speak->tag;
+    return ! empty($links) ? $text . ': ' . implode($connect, $links) : "";
 });
 
-Config::set(array(
-    'speak.older' => $speak->older . ' <i class="fa fa-angle-right"></i>',
-    'speak.newer' => '<i class="fa fa-angle-left"></i> ' . $speak->newer
-));
-
-Filter::add('navigation:list', function($str) {
-    return preg_replace(
-        array(
-            '#^<ul>#',
-            '# class="current"#'
-        ),
-        array(
-            '<ul class="nav navbar-nav">',
-            ' class="active"'
-        ),
-    $str);
+Filter::add('chunk:output', function($content, $path) use($config, $speak) {
+    $name = File::N($path);
+    // Add an icon to the older and newer link text
+    if($name === 'pager') {
+        $content = str_replace('>' . $speak->newer . '</a>', '><i class="fa fa-angle-left"></i> ' . trim(strip_tags($speak->newer)) . '</a>', $content);
+        $content = str_replace('>' . $speak->older . '</a>', '>' . trim(strip_tags($speak->older)) . ' <i class="fa fa-angle-right"></i></a>', $content);
+    }
+    if($name === 'block.header') {
+        $content = str_replace('<p class="blog-slogan">', '<p class="blog-slogan lead">', $content);
+    }
+    return $content;
 });
 
-Menu::configure('classes', array(
-    'current' => 'current',
-    'children' => 'navbar-nav-submenu navbar-nav-submenu-%d'
-));
+Config::set($config->page_type . '_fields_exclude', array('content', 'content_raw'));
+
+Menu::$config['classes']['current'] = 'current';
+Menu::$config['classes']['child'] = 'navbar-nav-submenu navbar-nav-submenu-%d';
+
+Filter::add('navigation:trunk', function($content) {
+    return str_replace(' class="parent"', ' class="nav navbar-nav parent"', $content);
+});
+
+Filter::add('navigation:twig', function($content) {
+    $content = str_replace(' class="current"', ' class="active"', $content);
+    $content = str_replace(' class="current ', ' class="active ', $content);
+    return $content;
+});

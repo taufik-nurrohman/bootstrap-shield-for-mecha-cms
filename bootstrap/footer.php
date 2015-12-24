@@ -1,5 +1,5 @@
         </div> <!-- .blog-main -->
-        <?php include 'sidebar.php'; ?>
+        <?php Shield::chunk('sidebar'); ?>
       </div> <!-- .row -->
     </div> <!-- .container -->
     <footer class="blog-footer cf">

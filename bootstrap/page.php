@@ -1,9 +1,7 @@
-<?php include 'header.php'; ?>
+<?php Shield::chunk('header'); ?>
 <article class="post" id="post-<?php echo $page->id; ?>">
-  <h2 class="post-title"><?php echo $page->title; ?></h2>
-  <div class="post-body"><?php echo $page->content; ?></div>
-  <footer class="post-footer">
-    <div><?php Weapon::fire('page_footer', array($page)); ?></div>
-  </footer>
+  <?php Shield::chunk('page.title'); ?>
+  <?php Shield::chunk('page.body'); ?>
+  <?php Shield::chunk('page.footer'); ?>
 </article>
-<?php include 'footer.php'; ?>
+<?php Shield::chunk('footer'); ?>

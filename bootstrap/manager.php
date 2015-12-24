@@ -1,8 +1,6 @@
-<?php include 'header.php'; ?>
+<?php Shield::chunk('header'); ?>
 <article class="post">
-  <h2 class="post-title"><?php echo $config->page_title; ?></h2>
-  <div class="post-body">
-    <?php if($cargo = File::exist($config->cargo)) include $cargo; ?>
-  </div>
+  <?php Shield::chunk('page.title'); ?>
+  <?php Shield::chunk('page.body'); ?>
 </article>
-<?php include 'footer.php'; ?>
+<?php Shield::chunk('footer'); ?>

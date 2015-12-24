@@ -100,6 +100,7 @@ pre {border-width:0}
 .widget-archive-hierarchy .close {
   font:inherit;
   color:inherit;
+  float:left;
   font-family:Sans-Serif;
   text-shadow:none;
   opacity:1;
