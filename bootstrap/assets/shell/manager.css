@@ -119,25 +119,22 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 
 /* TAB */
 
-.tab {
-  color:#337ab7;
+.tab-button {
+  background-color:#f5f5f5;
   font-weight:normal;
   border-radius:4px 4px 0 0;
 }
 
-.tab:focus,
-.tab:hover {color:#23527c}
+.tab-button.active,
+.tab-button.active:focus,
+.tab-button.active:hover {background-color:inherit}
 
-.tab.active,
-.tab.active:focus,
-.tab.active:hover {color:inherit}
+.tab-button,
+.tab-button.active:before,
+.tab-button.active:after {border-color:#ddd}
 
-.tab,
-.tab.active:before,
-.tab.active:after {border-color:#ddd}
-
-.tab:focus,
-.tab:hover {
+.tab-button:focus,
+.tab-button:hover {
   outline:none;
   text-decoration:none;
 }
@@ -164,8 +161,8 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 
 /* LIST */
 
-.page-list .page-header {
-  margin:0;
+.pages .page-header {
+  margin:0 0 .6153846153846154em;
   padding:0;
   border:none;
 }
@@ -188,6 +185,7 @@ textarea + .editor-toolbar a {margin:5px -1px 0 0}
 .page-manager .media + .media {margin-top:0}
 .page-manager .media-title {margin-top:-.15em}
 .page-manager .media-title + p {margin-top:10px}
+.page-manager .media form:last-child,
 .page-manager .media p:last-child {margin-bottom:0}
 
 

@@ -16,10 +16,8 @@
     </footer>
     <?php Weapon::fire('cargo_after'); ?>
     <?php Weapon::fire('sword_before'); ?>
-    <?php echo Asset::javascript(array(
-        $config->protocol . 'ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
-        'assets/sword/bootstrap.min.js'
-    )); ?>
+    <?php echo Asset::javascript($config->protocol . 'ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'); ?>
+    <?php echo Asset::javascript('assets/sword/bootstrap.min.js'); ?>
     <?php Weapon::fire('sword_after'); ?>
     <?php Weapon::fire('SHIPMENT_REGION_BOTTOM'); ?>
   </body>

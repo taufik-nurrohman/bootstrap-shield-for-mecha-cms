@@ -1,4 +1,4 @@
-/* GENERALS */
+/* GENERAL */
 
 abbr {text-decoration:none}
 
@@ -11,6 +11,17 @@ h1,h2,h3,h4,h5,h6,
 
 fieldset {margin:0 0 10px}
 pre {border-width:0}
+
+input[type="image"] {
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  outline:none;
+  width:auto;
+  height:auto;
+  box-shadow:none;
+}
 
 .blog-main {padding-bottom:30px}
 .footnotes {font-size:75%}
@@ -39,14 +50,14 @@ pre {border-width:0}
 .blog-header h1 a:hover {color:#245269}
 
 
-/* POSTS */
+/* POST */
 
 .post-index {padding:20px 0}
 .post-index + .post-index {border-top:1px solid #e5f2f7}
 .post-footer {margin:20px 0 0}
 
 
-/* COMMENTS */
+/* COMMENT */
 
 .comments .media {
   padding:0;
@@ -56,6 +67,11 @@ pre {border-width:0}
 
 .comments .media-content {margin-bottom:10px}
 .comments input[name="math"] {width:4em}
+
+
+/* SIDEBAR */
+
+.blog-sidebar {padding:0 0 20px}
 
 
 /* FOOTER */

@@ -24,6 +24,9 @@ Filter::add('chunk:output', function($content, $path) use($config, $speak) {
     if($name === 'block.header') {
         $content = str_replace('<p class="blog-slogan">', '<p class="blog-slogan lead">', $content);
     }
+    if($name === 'comment.form') {
+        $content = str_replace('>' . $speak->publish . '</button>', '><i class="fa fa-send"></i> ' . trim(strip_tags($speak->publish)) . '</button>', $content);
+    }
     return $content;
 });
 
