@@ -71,7 +71,7 @@ input[type="image"] {
 
 /* SIDEBAR */
 
-.blog-sidebar {padding:0 0 20px}
+.blog-sidebar {padding-bottom:20px}
 
 
 /* FOOTER */
@@ -132,7 +132,6 @@ input[type="image"] {
 }
 
 .grid-group {margin-bottom:10px}
-.post .toc-block {margin-bottom:20px} /* TOC Plugin */
 
 .form-label,
 .form-static {
@@ -703,7 +702,10 @@ fieldset[disabled] .btn-reject.active {
 }
 
 .text-muted,
-.text-fade {color:#777}
+.text-fade,
+.post-time,
+.comment-time,
+.recent-response-time {color:#777}
 .text-accept,
 .text-begin,
 .text-construct,

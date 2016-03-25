@@ -1,7 +1,7 @@
 Title: Bootstrap
 Author: Taufik Nurrohman
-URL: http://mecha-cms.com
-Version: 1.3.0
+URL: http://latitudu.com
+Version: 1.3.1
 
 ====
 

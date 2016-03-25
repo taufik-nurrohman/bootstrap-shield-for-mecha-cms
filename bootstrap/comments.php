@@ -14,7 +14,7 @@
         <h4 class="media-heading"><?php echo $comment->name; ?></h4>
         <?php endif; ?>
         <div class="media-content">
-          <p class="media-time small"><em><time class="text-muted" datetime="<?php echo $comment->date->W3C; ?>"><?php echo $comment->date->FORMAT_1; ?></time> <a href="<?php echo $comment->permalink; ?>" title="<?php echo $speak->permalink; ?>" rel="nofollow">#</a></em></p>
+          <p class="media-time"><time class="text-muted" datetime="<?php echo $comment->date->W3C; ?>"><?php echo $comment->date->FORMAT_1; ?></time> <a href="<?php echo $comment->permalink; ?>" title="<?php echo $speak->permalink; ?>" rel="nofollow">#</a></p>
           <?php echo $comment->message; ?>
         </div>
         <footer class="media-footer">
